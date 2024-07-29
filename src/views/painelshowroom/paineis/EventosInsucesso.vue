@@ -24,14 +24,14 @@
                    
                 
             </div>
-            <div class="conteudo" style=" width: 60%; height: 90vh; text-align: center">
+            <div class="conteudo" style=" width: 700px; height: 90vh; text-align: center">
          
               <span style=" color: red; font-size: 40px; ">
                         Negócios Perdidos Hoje
                     </span>
 
                   
-                    <div style="margin-left: 40px; font-size: 20px;  height: 95vh; padding: 15px;text-align: center; font-weight: bold; color: black">
+                    <div style="margin-left: 60px; font-size: 20px;  height: 95vh; padding: 15px;text-align: center;  color: black">
             
 
             <table >
