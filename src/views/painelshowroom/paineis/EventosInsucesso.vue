@@ -31,10 +31,10 @@
                     </span>
 
                   
-                    <div style="margin-left: 60px; font-size: 20px;  height: 95vh; padding: 15px;text-align: center;  color: black">
+                    <div style="margin-left: 0px; font-size: 20px;  height: 95vh; padding: 15px;text-align: center;  color: black">
             
 
-            <table >
+            <table style="width: 600px">
               <tr>
                   <th>Vendedor</th>
                   <th>Evento</th>     
