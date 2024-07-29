@@ -19,7 +19,7 @@
 <br><br><br>
             <div style="text-align: center;">
                 <span style=" color:black; font-size: 30px; ">
-                      Cliente esperando á
+                      Cliente esperando à:
                     </span>
                 <div style="  margin-top: -70px; color: black; font-size: 200px; font-weight: bold;">
                        {{store.dadosSyonet.filter(f=> f.tipo == 'EVENTOS-AGUARDANDO' && f.id_empresa == storeLogin.empresaSelecionada)[0]?.qtde}}
@@ -48,19 +48,19 @@
           
              
             ">  
-            <table style="margin: 0px 0px 0px 90px; width: 700px;
+            <table style="margin: 0px 0px 0px 40px; width: 700px;
             ">
               <tr>
                     <th>Evento</th>
                     <th>Vendedor</th>
-                    <th>Cliente</th>
+                    <th>Tipo</th>
                     <th>Tempo</th>
                
                 </tr>
                 <tr v-for="l in store.dadosSyonet.filter(f=> f.tipo == 'EVENTOS-AGUARDANDO' && f.id_empresa == storeLogin.empresaSelecionada)">
                   <td style="text-align: left;">{{ l.id_evento }} </td>  
                   <td>{{ l.vendedor }}</td>
-                  <td style="text-align: left;">{{  l.nm_cliente.substring(0, 15)}}... </td>
+                  <td>{{ l.id_tipoevento }}</td>
                     <td>{{ l.qtde }}</td>
                     
                 </tr>                

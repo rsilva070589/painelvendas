@@ -31,20 +31,20 @@
                     </span>
 
                   
-                    <div style="font-size: 20px;  height: 95vh; padding: 15px;text-align: center; font-weight: bold; color: black">
+                    <div style="margin-left: 40px; font-size: 20px;  height: 95vh; padding: 15px;text-align: center; font-weight: bold; color: black">
             
 
             <table >
               <tr>
                   <th>Vendedor</th>
                   <th>Evento</th>     
-                  <th>Cliente</th>               
+                  <th>Tipo</th>     
                   <th>Motivo</th>
               </tr>
               <tr  v-for="e in store.dadosSyonet.filter(f => f.tipo=='EVENTOS-PERDIDOS' && f.id_empresa == storeLogin.empresaSelecionada)">
                 <td>{{ e.vendedor }}</td>
                   <td>{{ e.id_evento }}</td>     
-                  <td>{{ e.nm_cliente }}</td>                
+                  <td>{{ e.id_tipoevento }}</td>     
                   <td>{{e.midia}}</td>                  
               </tr>           
                
