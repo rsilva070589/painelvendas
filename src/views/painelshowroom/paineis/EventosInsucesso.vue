@@ -42,10 +42,10 @@
                   <th>Motivo</th>
               </tr>
               <tr  v-for="e in store.dadosSyonet.filter(f => f.tipo=='EVENTOS-PERDIDOS' && f.id_empresa == storeLogin.empresaSelecionada)">
-                <td>{{ e.vendedor }}</td>
+                  <td>{{ e.vendedor }}</td>
                   <td>{{ e.id_evento }}</td>     
                   <td>{{ e.id_tipoevento }}</td>     
-                  <td>{{e.midia}}</td>                  
+                  <td>{{ e.midia }}</td>                  
               </tr>           
                
             </table>
@@ -61,15 +61,13 @@
      
 </template>
     
-    <script setup>    
-      import { defineComponent, ref, onMounted } from 'vue';
-     import { indexStore, useUserStore } from '../../../store/indexStore' 
- 
+<script setup>    
+     import { defineComponent, ref, onMounted } from 'vue';
+     import { indexStore, useUserStore } from '../../../store/indexStore'  
      import PizzaPerdidos from '../paineis/PizzaPerdidos.vue'
-
      import { Pie } from 'vue-chartjs';
-import { Chart, registerables } from 'chart.js';
-Chart.register(...registerables);
+     import { Chart, registerables } from 'chart.js';
+     Chart.register(...registerables);
 
 
     const store = indexStore(); 

@@ -132,7 +132,6 @@ const storeLogin = useUserStore();
       }
       conversoes.push(data)
   })
- 
   return conversoes
  }  
 

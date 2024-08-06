@@ -1,6 +1,6 @@
 <template >  
  
-  
+ 
     <div 
        @mouseover="store.mostrarFiltros = true"  style="padding: 10px; display: flex;   justify-content: space-between; text-align: left;">
         <div style=" width: 35%; height: 95vh; padding: 25px; ">
@@ -96,7 +96,7 @@ const storeLogin = useUserStore();
   const ajustados = []
   store.dadosPainel.filter(f=> f.TIPO=='VENDAS-POR-VENDEDOR' && f.COD_EMPRESA==storeLogin.empresaSelecionada).map(x => {
   let data = {
-    id_evento: x.COD_EVENTO,
+    id_agendamentoerp: x.COD_PROPOSTA,
     id_empresa: x.COD_EMPRESA,
     vendedor: x.VENDEDOR,
     qtde: x.QTDE
@@ -106,8 +106,7 @@ const storeLogin = useUserStore();
   return ajustados
 }
 
-const SyonetNBS = unionArraysByProperty(arrayAjustado(), store.dadosSyonet.filter(f => f.tipo=='EVENTOS-ATENDIDOS' && f.ds_formacontato=='INTERNET' && f.id_empresa==storeLogin.empresaSelecionada),'id_agendamentoerp')
-
+const SyonetNBS = unionArraysByProperty(arrayAjustado(), store.dadosSyonet.filter(f => f.tipo=='EVENTOS-ATENDIDOS' && f.ds_formacontato=='INTERNET' && f.id_empresa==storeLogin.empresaSelecionada && f.id_agendamentoerp != null),'id_agendamentoerp')
   
 
 distinctArray(store.dadosPainel.filter(f=> f.TIPO=='VENDAS-POR-VENDEDOR' && f.COD_EMPRESA==storeLogin.empresaSelecionada && f.VENDEDOR != 'RITA' && f.VENDEDOR != 'RITA13').map(x=> x.VENDEDOR)).map(v => {  
@@ -143,10 +142,21 @@ function distinctArray(arr) {
     });
 }
 
-function unionArraysByProperty(arr1, arr2, prop) {
-    const set = new Set([...arr1, ...arr2].map(obj => obj[prop]));
-    return [...set].map(uniqueProp => arr1.concat(arr2).find(obj => obj[prop] === uniqueProp));
-}
+ 
+
+function unionArraysByProperty(array1, array2, property) {
+    const array2Map = array2.reduce((map, item) => {
+      map[item[property]] = item;
+      return map;
+    }, {});
+    
+    return array1
+      .filter(item => array2Map[item[property]])
+      .map(item => ({
+        ...item,
+        ...array2Map[item[property]]
+      }));
+  }
 
 
 const anterior = ()=> {   

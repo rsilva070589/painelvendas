@@ -1,7 +1,4 @@
 <template >    
-
-
-
     <div @mouseover="store.mostrarFiltros = true"  style="padding: 10px; display: flex;   justify-content: space-between; text-align: left;">
         <div style=" width: 35%; height: 95vh; padding: 25px; ">
            
