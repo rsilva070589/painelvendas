@@ -30,7 +30,7 @@
        <div style="font-size: 30px;width: 60%;  text-align: center">
            <div>
                <div style=" font-weight: bold; color: black;"> 
-                   Eventos em Atraso 
+                Eventos Atrasados  
                </div>    
                <div style="display: flex; margin-top: -30px; padding: 0px; ">                      
                    <div style="margin-left: 5px; padding: 10px; width: 90%; margin-top: 0px;"  >             
@@ -63,7 +63,7 @@
 
            <div>
                <div style=" font-weight: bold; color: black;"> 
-                   Atendimentos com Atraso 
+                    Dias Finalizados com Eventos Atrasados 
                </div>    
                <div style="display: flex; margin-top: -30px; padding: 0px; ">                      
                    <div style="margin-left: 5px; padding: 10px; width: 90%; margin-top: 0px;"  >             
