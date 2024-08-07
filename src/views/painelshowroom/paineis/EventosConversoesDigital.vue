@@ -27,7 +27,7 @@
                     <th>Sucesso</th>
                     <th>Conversão</th>
                 </tr>
-                <tr v-for="v in conversoes().sort((a, b) => b.taxaConversao - a.taxaConversao)">
+                <tr v-for="v in conversoes().sort((a, b) => b.qtdeVendas - a.qtdeVendas)">
                     <td>{{ v.vendedor }}</td>
                     <td>{{ v.qtdeEventos }}</td>
                     <td>{{ v.qtdeVendas }}</td>
